@@ -6,7 +6,13 @@ namespace Recursie.library
     {
         public static QueueString ReverseTextToQueue(string text)
         {
-            throw new NotImplementedException();
+            if (text == "")
+                return new QueueString();
+
+            var queue = ReverseTextToQueue(text.Substring(1));
+            queue.Enqueue(text[0].ToString());
+
+            return queue;
         }
     }
 }
