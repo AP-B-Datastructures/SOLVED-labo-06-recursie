@@ -9,7 +9,15 @@ namespace Recursie.tests
         [TestMethod]
         public void ReverseText_ReverseEmptyTextIsEmpty()
         {
-            throw new NotImplementedException();
+            //arrange
+            string input = "hallo";
+            string expected = "ollah";
+
+            //act
+            string result = ReverseString.ReverseText(input);
+
+            //assert
+            Assert.AreEqual(expected, result);
         }
     }
 }
